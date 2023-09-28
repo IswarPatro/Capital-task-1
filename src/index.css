@@ -1,13 +1,84 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+.header {
+  padding: 0;
+  height: 70px;
+  margin-top: 40px;
+  position: static;
+  margin-left: 70px;
+  box-shadow: 1px 1px 9px 1px rgba(69, 168, 234, 0.45),
+    -9px 27px 20px -29px rgba(62, 94, 200, 0.45);
+}
+.sider {
+  box-shadow: 2px 3px 4px rgba(69, 168, 234, 0.45);
+}
+.app_form {
+  position: relative;
+  color: white;
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.app_form:after {
+  position: absolute;
+  right: -20px;
+  top: 20px;
+  content: "";
+  border-left: solid 20px rgba(0, 0, 0, 0.8);
+  border-bottom: solid 15px transparent;
+  border-top: solid 15px transparent;
+}
+.Card_Info {
+  box-shadow: 1px 1px 9px 1px rgba(69, 168, 234, 0.45),
+    -9px 27px 20px -29px rgba(62, 94, 200, 0.45);
+}
+.multiple_ele {
+  display: flex;
+  flex-wrap: wrap;
+}
+.icon-bold {
+  stroke-width: 25;
+  stroke: black;
+  color: black;
+}
+.picture-card {
+  width: 800px;
+}
+.content {
+  margin-left: 80px;
+  margin-top: 10px;
+  padding: 24px;
+  min-height: 100vh;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+}
+.grid > div {
+  text-align: center;
+  box-shadow: 5px 0 5px -5px rgba(0, 0, 0, 0.7),
+    -5px 0 5px -5px rgba(0, 0, 0, 0.7);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media only screen and (max-width: 600px) {
+  .content {
+    margin-top: 100px;
+  }
+  .grid {
+    grid-template-columns: repeat(2, auto);
+    /* box-shadow: 1px 1px 9px 1px rgba(69, 168, 234, 0.45),
+      -9px 27px 20px -29px rgba(62, 94, 200, 0.45); */
+  }
+  .grid > div {
+    width: 260px;
+    box-shadow: 1px 1px 9px 1px rgba(69, 168, 234, 0.45),
+      -9px 27px 20px -29px rgba(62, 94, 200, 0.45);
+  }
+
+  .sider {
+    width: 30px;
+  }
+  .Card_Info {
+    width: 250px;
+  }
 }
